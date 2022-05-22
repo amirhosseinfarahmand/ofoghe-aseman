@@ -27,6 +27,7 @@ import {
   MenuItem,
   Menu,
 } from "@mui/material";
+import FormatAlignRightIcon from "@mui/icons-material/FormatAlignRight";
 import { useRouter } from "next/router";
 
 const Header = () => {
@@ -85,9 +86,9 @@ const Header = () => {
           sx={{
             display: "flex",
             alignItems: "center",
-            minWidth: { md: "300px", xs: "auto" },
+            minWidth: { md: "300px" },
             justifyContent: "space-between",
-            mr: 10,
+            mr: { xs: 1, sm: 10 },
           }}
         >
           <List
@@ -96,20 +97,22 @@ const Header = () => {
             }}
           >
             <ListItem>
-              <ListItemIcon sx={{ minWidth: "40px" }}>
+              <ListItemIcon sx={{ minWidth: { xs: "30px", sm: "40px" } }}>
                 <Earth />
               </ListItemIcon>
-              <ListItemIcon sx={{ minWidth: "40px" }}>
+              <ListItemIcon sx={{ minWidth: { xs: "30px", sm: "40px" } }}>
                 <Zing />
               </ListItemIcon>
-              <ListItemIcon sx={{ minWidth: "40px" }}>
+              <ListItemIcon sx={{ minWidth: { xs: "30px", sm: "40px" } }}>
                 <Phone />
               </ListItemIcon>
-              <ListItemIcon sx={{ minWidth: "40px" }}>
+              <ListItemIcon sx={{ minWidth: { xs: "0", sm: "40px" } }}>
                 <TextBox />
               </ListItemIcon>
             </ListItem>
           </List>
+        </Box>
+        <Box>
           <Button
             id="demo-positioned-button"
             aria-controls={open ? "demo-positioned-menu" : undefined}

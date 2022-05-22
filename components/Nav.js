@@ -138,6 +138,8 @@ const Nav = () => {
               aria-label="basic tabs example"
               indicatorColor="#292524"
               textColor="primary"
+              scrollButtons="auto"
+              variant="scrollable"
             >
               <Tab
                 onClick={() => onChangeAirplane()}
@@ -225,7 +227,7 @@ const Nav = () => {
             <Box
               sx={{
                 display: "flex",
-                width: "300px",
+                width: "auto",
                 justifyContent: "space-between",
               }}
             >
